@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 html {
   box-sizing: border-box;
 }
@@ -10,6 +12,7 @@ html {
 body {
   margin: 0;
   font-family: "Open Sans";
+  color: var(--main-text-cl);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,0 +1,27 @@
+@import '../../scss/utils/variables';
+@import '../../scss/utils/mixin';
+
+.footer{
+    background-color: var(--secondary-txt-cl);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.list{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.icon{
+    fill:#fff;
+    &:hover{
+        fill: var(--accent-cl);
+    }
+}
+.listItem:not(:last-child){
+    padding-right: 25px;
+}
+.copy{
+    @include fonts(16px, 1.31);
+    text-align: center;
+    margin-top: 12px;
+}

@@ -1,0 +1,37 @@
+@import '../../scss/utils/variables';
+@import '../../scss//utils//mixin';
+
+.bespokeSolutions{
+    background-color: var(--accent-cl);
+}
+.textWrapper{
+    padding-top: 79px;
+    padding-bottom: 79px;
+}
+.text{
+    @include fonts(16px, 1.37);
+}
+.heading{
+    @include fonts(32px, 1.37);
+    margin-top: 16px;
+}
+.info{
+    @include fonts(16px, 1.37);
+    margin-top: 24px;
+}
+.btn{
+    @include fonts(16px, 1.31);
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 16px 32px;
+    background-color: transparent;
+    margin-top: 24px;
+    box-shadow: var(--main-shadow);
+    &:hover,
+    &:focus {
+      background-color: #F4F4F4;
+      color: #28A745;
+    }
+}

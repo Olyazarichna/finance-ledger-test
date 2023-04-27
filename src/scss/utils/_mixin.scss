@@ -1,3 +1,10 @@
+@mixin fonts($fs,$fw:400,$lh:1.2,$ls:0.01em) {
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
 /* MEDIA QUERIES*/
 @mixin mq($range) {
     $mobile: 320px;

@@ -1,0 +1,44 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variables";
+.teamSection{
+    padding-bottom: 50px;
+}
+.textWrapper {
+  padding-top: 72px;
+  padding-bottom: 63px;
+  text-align: center;
+}
+.text {
+  @include fonts(16px, 1.31);
+  color: var(--secondary-txt-cl);
+}
+.mainText {
+  @include fonts(32px, 1.34);
+  color: var(--secondary-txt-cl);
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+.textInfo {
+  @extend .text;
+  width: 219px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.listItem:not(:first-child){
+    padding-top: 30px;
+}
+.caption {
+  @include fonts(20px, 1.35);
+  color: var(--secondary-txt-cl);
+  padding-top:16px; 
+  text-align: center;
+}
+.title {
+  @include fonts(18px, 1.16);
+  color: var(--secondary-txt-cl);
+  padding-top: 8px;
+  text-align: center;
+}

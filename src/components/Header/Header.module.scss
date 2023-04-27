@@ -1,0 +1,32 @@
+@import "../../scss/utils/mixin";
+@import "../../scss/utils/variables";
+
+.navigationList {
+    padding-left: 22px;
+    padding-top: 18px;
+     display: flex;
+}
+.listItem:not(:first-child){
+    padding-left: 8px;
+}
+.navigationListItem {
+    @include fonts(16px,1.3);
+   
+  color: var(--main-text-cl);
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.content {
+  // position: relative;
+  // padding-top: 16px;
+  @include mq(tablet) {
+    //   padding-bottom: 0;
+    //   padding-top: 20px;
+  }
+  @include mq(desktop) {
+    //   display: flex;
+    //   align-items: center;
+    //   padding-top: 30px;
+  }
+}

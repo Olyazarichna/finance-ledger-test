@@ -1,0 +1,31 @@
+@import "../../scss//utils//variables";
+@import "../../scss//utils/mixin";
+
+.input {
+  padding: 16px 8px;
+  background-color: #ffffff;
+  outline: transparent;
+  border: transparent;
+  border-radius: 5px;
+  width: 280px;
+  &:first-child{
+    margin-bottom: 16px; 
+  }
+}
+.btn {
+  color: #fff;
+  background-color: var(--accent-cl);
+  padding: 16px 56px;
+  @include fonts(18px, 1.33);
+  border-radius: 5px;
+  border-color: transparent;
+  margin-top: 24px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-cl-active);
+  }
+  &::placeholder {
+    color: #808080;
+  }
+}

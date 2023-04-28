@@ -2,23 +2,26 @@
 @import "../../scss/utils/variables";
 
 .logoWrapper {
+  transition: all 300ms ease-in-out;
   display: flex;
+  padding-left: 24px;
   @include mq(tablet) {
     align-items: center;
-  }
-}
-.logoText {
-  transition: all 300ms ease-in-out;
-  @include fonts(28px, 400,1.35);
-
-  @include mq(tablet) {
-    @include fonts(35px,400, 1.37);
   }
   &:hover,
   &:focus {
     cursor: pointer;
-    text-shadow: 0 4px 4px 0px rgba(0, 0, 0, 0.25);
     transform: scale(1.1);
+    fill: var(--accent-cl-active);
+  }
+}
+.logo {
+  fill: var(--accent-cl);
+}
+.logoText {
+  @include fonts(28px, 400, 1.35);
+  @include mq(tablet) {
+    @include fonts(35px, 400, 1.37);
   }
 }
 .logoSpan {

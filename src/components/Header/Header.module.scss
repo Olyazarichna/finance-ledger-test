@@ -2,7 +2,7 @@
 @import "../../scss/utils/variables";
 
 .headerContainer {
-  padding: 22px 24px 0;
+  padding-top: 22px;
   @include mq(tablet) {
     display: flex;
     justify-content: space-between;
@@ -15,38 +15,41 @@
 }
 .navigationList {
   padding-top: 16px;
+  padding-left: 16px;
   display: flex;
   @include mq(tablet) {
     padding: 0;
   }
 }
 .listItem {
+  justify-content: center;
   position: relative;
-}
-.listItem:not(:first-child) {
-  margin-left: 12px;
+  padding-left: 6px;
+  padding-right: 6px;
   @include mq(tablet) {
-    margin-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   @include mq(desktop) {
-   margin-left: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .navigationLink {
-  @include fonts(16px, 400,1.3);
+  @include fonts(16px, 400, 1.3);
   display: inline-block;
   color: var(--main-text-cl);
   @include mq(tablet) {
-    @include fonts(18px,400, 1.38);
+    @include fonts(18px, 400, 1.38);
   }
- &:hover:after {
+  &:hover:after {
     cursor: pointer;
     position: absolute;
     content: "";
     width: 100%;
     height: 2px;
     left: 0;
-    bottom: -4px;
-        background-color: var(--accent-cl);
+    bottom: -6px;
+    background-color: var(--accent-cl);
   }
 }

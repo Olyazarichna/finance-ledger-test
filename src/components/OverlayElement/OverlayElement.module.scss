@@ -1,0 +1,25 @@
+@import '../../scss/utils/mixin';
+  .list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .listItem:not(:last-child){
+    margin-right: 20px;
+    @include mq(tablet){
+      margin-right: 16px;
+    }
+    @include mq(desktop){
+      margin-right: 25px;
+    }
+  }
+  .icon{
+    fill:#fff;
+    &:hover,
+    &:focus{
+        fill:rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+
+// Секція Our Professional Team  при ховері - збільшується саме фото, з'являється тінь навколо, фото отримує маску-filter з прозорістю 0.6 та соціальні іконки, які в свою чергу при ховері отримують прозорість 0.8.

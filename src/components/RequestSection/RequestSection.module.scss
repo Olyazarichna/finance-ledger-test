@@ -1,15 +1,24 @@
 @import "../../scss/utils/mixin";
 @import "../../scss/utils/variables";
 
-.requestSection{
-    background-color: #F4F4F4;
-    padding-bottom: 25px;
-    text-align: center;
+.requestSection {
+  background-color: #f4f4f4;
+  @include mq(tablet) {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 0;
+  }
 }
-.heading{
-    color: var( --secondary-txt-cl);
-    @include fonts(32px,1.5);
-    text-align:center;
-    margin-top: 51px;
-    margin-bottom: 69px;
+.img {
+  @include mq(tablet) {
+    width: 368px;
+    height: 354px;
+    object-fit: cover;
+  }
+  @include mq(desktop) {
+    width: 670px;
+    height: auto;
+  }
 }

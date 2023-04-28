@@ -1,33 +1,33 @@
-import style from "./TeamSectiom.module.scss";
-import person1_1x from "../../images/team/person1.jpg";
-import person1_2x from "../../images/team/person1@2x.jpg";
-import person1Webp1x from "../../images/team/person1.webp";
-import person1Webp2x from "../../images/team/person1@2x.webp";
-
-import person2_1x from "../../images/team/person2.jpg";
-import person2_2x from "../../images/team/person2@2x.jpg";
-import person2Webp1x from "../../images/team/person2.webp";
-import person2Webp2x from "../../images/team/person2@2x.webp";
-
-import person3_1x from "../../images/team/person3.jpg";
-import person3_2x from "../../images/team/person3@2x.jpg";
-import person3Webp1x from "../../images/team/person3.webp";
-import person3Webp2x from "../../images/team/person3@2x.webp";
+import styles from "./TeamSectiom.module.scss";
+import {
+  person1_1x,
+  person1_2x,
+  person1Webp1x,
+  person1Webp2x,
+  person2_1x,
+  person2_2x,
+  person2Webp1x,
+  person2Webp2x,
+  person3_1x,
+  person3_2x,
+  person3Webp1x,
+  person3Webp2x,
+} from "./gallery";
 
 const TeamSection = () => {
   return (
-    <section className={["container", style.teamSection].join(" ")}>
-      <div className={style.textWrapper}>
-        <p className={style.text}>Who we are</p>
-        <h2 className={style.mainText}>Our Professional Team</h2>
-        <p className={style.textInfo}>
+    <section className={styles.teamSection}>
+      <div className={styles.textWrapper}>
+        <p className={styles.text}>Who we are</p>
+        <h2 className={styles.heading}>Our Professional Team</h2>
+        <p className={styles.textInfo}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
           sapiente!
         </p>
       </div>
 
-      <ul>
-        <li className={style.listItem}>
+      <ul className={styles.list}>
+        <li className={styles.listItem}>
           <picture>
             <source
               srcSet={`${person1Webp1x} 1x, ${person1Webp2x} 2x`}
@@ -38,15 +38,15 @@ const TeamSection = () => {
               type="image/jpeg"
             />
             <img
+              className={styles.img}
               src={person1_1x}
               alt="John Doe, president of company"
-              width={280}
             />
           </picture>
-          <h3 className={style.caption}>John Doe</h3>
-          <p className={style.title}>President</p>
+          <h3 className={styles.caption}>John Doe</h3>
+          <p className={styles.title}>President</p>
         </li>
-        <li className={style.listItem}>
+        <li className={styles.listItem}>
           <picture>
             <source
               srcSet={`${person2Webp1x} 1x, ${person2Webp2x} 2x`}
@@ -57,15 +57,15 @@ const TeamSection = () => {
               type="image/jpeg"
             />
             <img
+              className={styles.img}
               src={person2_1x}
               alt="Jane Doe, Vice President of company"
-              width={280}
             />
           </picture>
-          <h3 className={style.caption}>Jane Doe</h3>
-          <p className={style.title}>Vice President</p>
+          <h3 className={styles.caption}>Jane Doe</h3>
+          <p className={styles.title}>Vice President</p>
         </li>
-        <li className={style.listItem}>
+        <li className={styles.listItem}>
           <picture>
             <source
               srcSet={`${person3Webp1x} 1x, ${person3Webp2x} 2x`}
@@ -76,13 +76,13 @@ const TeamSection = () => {
               type="image/jpeg"
             />
             <img
+              className={styles.img}
               src={person3_1x}
               alt="Steve Smith, Marketing Head"
-              width={280}
             />
           </picture>
-          <h3 className={style.caption}>Steve Smith</h3>
-          <p className={style.title}>Marketing Head</p>
+          <h3 className={styles.caption}>Steve Smith</h3>
+          <p className={styles.title}>Marketing Head</p>
         </li>
       </ul>
     </section>

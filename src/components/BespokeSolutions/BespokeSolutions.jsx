@@ -6,6 +6,7 @@ import {
   peopleWebp1x,
   peolpeWebp2x,
 } from './gallery';
+
 const BespokeSolutions = () => {
   return (
     <section className={styles.bespokeSolutions}>

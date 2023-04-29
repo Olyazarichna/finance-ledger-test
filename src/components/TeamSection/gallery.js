@@ -18,3 +18,30 @@ export {
     person2_1x, person2_2x, person2Webp1x, person2Webp2x,
     person3_1x, person3_2x, person3Webp1x, person3Webp2x,
 };
+
+export const people = [
+    {
+        src: person1_1x,
+        srcSet: `${person1_1x} 1x, ${person1_2x} 2x`,
+        webpsrcset: `${person1Webp1x} 1x, ${person1Webp2x} 2x`,
+        alt: "John Doe, president of company",
+        name: "John Doe",
+        position: "President",
+    },
+    {
+        src: person2_1x,
+        srcSet: `${person2_1x} 1x, ${person2_2x} 2x`,
+        webpsrcset: `${person2Webp1x} 1x, ${person2Webp2x} 2x`,
+        alt: "Jane Doe, Vice President of company",
+        name: "Jane Doe",
+        position: "Vice President",
+    },
+    {
+        src: person3_1x,
+        srcSet: `${person3_1x} 1x, ${person3_2x} 2x`,
+        webpsrcset: `${person3Webp1x} 1x, ${person3Webp2x} 2x`,
+        alt: "Steve Smith, Marketing Head",
+        name: "Steve Smith",
+        position: "Marketing Head",
+    },
+];

@@ -5,18 +5,23 @@ import Button from "../Button/Button";
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [isValidEmail, setIsValidEmail]= useState(false);
+  const [isValidEmail, setIsValidEmail]= useState(true);
 
-
-  const onInputChange = (event) => {
+ const onInputChange = (event) => {
     const { name, value } = event.target;
+      const emailRegex = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
     switch (name) {
       case "name":
         setName(value);
         break;
-      case "email":
-        setEmail(value);
-        break;
+        case "email":
+          setEmail(value);
+          setIsValidEmail(
+           emailRegex.test(
+              value
+            )
+          );
+          break;
       default:
         break;
     }
@@ -24,13 +29,16 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const emailRegex = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
-    if (!emailRegex.test(email) || !email.trim()) {
+    if (!isValidEmail || !email.trim()) {
+      setIsValidEmail(false);
       return;
     }
-    setIsValidEmail(true);
+ resetForm();
   };
-
+  const resetForm =()=>{
+    setName('');
+    setEmail('');
+  }
   return (
     <div className={styles.formWrapper}>
       <h2 className={styles.heading}>Request Callback</h2>
@@ -59,13 +67,14 @@ const Form = () => {
           value={email}
           onChange={onInputChange}
           name="email"
-          required
+          autoComplete="off"  
+           required
         />
          <label htmlFor="email" className={styles.label}>
           Enter email*
         </label>
           </div>
-       {isValidEmail &&(
+       {!isValidEmail &&(
  <p className={styles.warming}>
  <svg
    className={styles.iconWarning}
@@ -82,8 +91,8 @@ const Form = () => {
  This is a required field
 </p>
        )}
-       
-        <Button className={styles.btn} type="submit">
+     
+        <Button className={styles.btn} buttonType="submit">
           Send
         </Button>
       </form>

@@ -6,7 +6,7 @@
     padding: 48px 32px 40px;
   }
   @include mq(desktop) {
-    padding: 80px 28px;
+    padding: 88px 28px;
   }
 }
 .textWrapper {
@@ -26,7 +26,6 @@
 .heading {
   @include fonts(32px, 400, 1.37);
   color: var(--secondary-txt-cl);
-  width: 280px;
   margin: 16px auto 24px;
   @include mq(table) {
     @include fonts(40px, 400, 1.35);
@@ -34,7 +33,6 @@
 }
 .textInfo {
   @extend .text;
-  width: 219px;
   margin-right: auto;
   margin-left: auto;
   @include mq(table) {

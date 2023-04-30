@@ -1,16 +1,17 @@
 import styles from "./Form.module.scss";
 import { useState } from "react";
 import Button from "../Button/Button";
-
+import Modal from "../Modal/Modal";
+import BackDrop from "../Backdrop/Backdrop";
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isValid, setIsValid] = useState(true);
-  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const onInputChange = (event) => {
     const { name, value } = event.target;
-   
+
     switch (name) {
       case "name":
         setName(value);
@@ -26,15 +27,15 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const emailRegex =
-    /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
+      /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/i;
 
-    if (!isValidEmail || !email.trim()) {
-      setIsValidEmail(false);
+    if (!email || !emailRegex.test(email.trim())) {
+      setIsValid(false);
       return;
     }
-   setIsValidEmail(emailRegex.test(email))
-   
+    setIsValid(true);
     resetForm();
+    setShowModal(true);
   };
   const resetForm = () => {
     setName("");
@@ -61,6 +62,7 @@ const Form = () => {
             value={name}
             onChange={onInputChange}
             name="name"
+            autoComplete="off"
           />
           <label htmlFor="name" className={styles.label}>
             Enter your name
@@ -75,14 +77,13 @@ const Form = () => {
             value={email}
             onChange={onInputChange}
             name="email"
-            required
             autoComplete="off"
           />
           <label htmlFor="email" className={styles.label}>
             Enter email*
           </label>
         </div>
-        {!isValidEmail && (
+        {!isValid && (
           <p className={styles.warming}>
             <svg
               className={styles.iconWarning}
@@ -103,6 +104,15 @@ const Form = () => {
           Send
         </Button>
       </form>
+      {showModal &&(
+      <>
+       <BackDrop onClick={() => setShowModal(false)} />  
+       <Modal onClose={() => setShowModal(false)} /> 
+      
+      </>
+    
+    
+      )}
     </div>
   );
 };

@@ -1,0 +1,47 @@
+@import "../../scss/utils/mixin";
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: opacity 0.3s ease-out;
+}
+.modalContent {
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  color: rgb(0, 0, 0);
+  @include fonts(16px, 400, 1.4);
+}
+
+.btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  color: var(--main-text-cl);
+  background-color: var(--accent-cl);
+  border-radius: var(--border-radius);
+  border-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  z-index: 20;
+}
+
+.btn:hover {
+  background-color: var(--accent-cl-active);
+}

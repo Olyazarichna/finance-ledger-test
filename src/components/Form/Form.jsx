@@ -104,14 +104,11 @@ const Form = () => {
           Send
         </Button>
       </form>
-      {showModal &&(
-      <>
-       <BackDrop onClick={() => setShowModal(false)} />  
-       <Modal onClose={() => setShowModal(false)} /> 
-      
-      </>
-    
-    
+      {showModal && (
+        <>
+          <BackDrop onClick={() => setShowModal(false)} />
+          <Modal onClose={() => setShowModal(false)} />
+        </>
       )}
     </div>
   );

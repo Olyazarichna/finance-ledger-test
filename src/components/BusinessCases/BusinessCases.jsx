@@ -33,7 +33,7 @@ const BusinessCases = () => {
     setIsOpen(false);
   };
   return (
-    <section className={styles.businessCasesSection}>
+    <section className={styles.businessCasesSection} id='cases'>
       <div className={styles.textWrapper}>
         <p className={styles.text}>This is what we do</p>
         <h2 className={styles.heading}>Business Cases</h2>

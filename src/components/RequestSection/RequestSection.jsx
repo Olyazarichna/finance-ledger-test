@@ -4,7 +4,7 @@ import Form from "../Form/Form";
 
 const RequestSection = () => {
   return (
-    <section className={styles.requestSection}>
+    <section className={styles.requestSection} id='contact'>
       <picture>
         <source
           srcSet={`${contactWebp1x} 1x, ${contactWebp2x} 2x`}

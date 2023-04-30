@@ -9,7 +9,7 @@ import {
 
 const BespokeSolutions = () => {
   return (
-    <section className={styles.bespokeSolutions}>
+    <section className={styles.bespokeSolutions} id='about'>
         <picture>
           <source
             srcSet={`${peopleWebp1x} 1x, ${peolpeWebp2x} 2x`}

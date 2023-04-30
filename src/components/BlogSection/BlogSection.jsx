@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 
 const BlogSection = () => {
   return (
-    <section className={styles.blogSection}>
+    <section className={styles.blogSection} id='blog'>
       <picture>
         <source
           srcSet={`${blogWebp1x} 1x, ${blogWebp2x} 2x`}

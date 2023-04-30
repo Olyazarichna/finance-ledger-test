@@ -4,7 +4,6 @@ import Lightbox from "react-spring-lightbox";
 import { useState } from "react";
 import { images } from "./gallery";
 
-
 const BusinessCases = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

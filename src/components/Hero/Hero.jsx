@@ -1,5 +1,6 @@
 import styles from "./Hero.module.scss";
 import Button from "../Button/Button";
+
 const Hero = () => {
   return (
     <section className={styles.wrapper} id='hero'>

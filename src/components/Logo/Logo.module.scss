@@ -5,6 +5,8 @@
   transition: all 300ms ease-in-out;
   display: flex;
   padding-left: 24px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
   @include mq(tablet) {
     align-items: center;
   }
@@ -28,6 +30,7 @@
   @extend .logoText;
   color: var(--accent-cl);
   padding: 0 8px;
+  transition: color 0.3s ease-out;
   &:hover,
   &:focus {
     color: var(--accent-cl-active);

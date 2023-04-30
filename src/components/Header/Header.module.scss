@@ -33,6 +33,7 @@
   justify-content: center;
   padding-left: 6px;
   padding-right: 6px;
+  transition: all 0.3s ease-out;
   @include mq(tablet) {
     padding-left: 10px;
     padding-right: 10px;

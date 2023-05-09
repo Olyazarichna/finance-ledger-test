@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./Header.module.scss";
-import Logo from "../Logo/Logo";
+import Logo from "../../components/Logo/Logo";
 import { Link } from "react-scroll";
 
 const Header = () => {

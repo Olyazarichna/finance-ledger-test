@@ -20,7 +20,7 @@
     }
 }
 .listItem:not(:last-child){
-    padding-right: 25px;
+    margin-right: 25px;
 }
 .copy{
     @include fonts(16px,400, 1.31);

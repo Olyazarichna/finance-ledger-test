@@ -1,13 +1,16 @@
-import Header from "../Header/Header";
-import Hero from "../Hero/Hero";
-import style from "./MainWrapper.module.scss";
+import Header from "../../sections/Header/Header";
+import Hero from "../../sections/Hero/Hero";
+import styles from "./MainWrapper.module.scss";
 
 const MainWrapper = () => {
   return (
-    <section className={style.container}>
+    <div className={`${"container"} ${styles.wrapper}`}>
       <Header />
       <Hero />
-    </section>
+    </div>
+    // <section className={style.container}>
+
+    // </section>
   );
 };
 

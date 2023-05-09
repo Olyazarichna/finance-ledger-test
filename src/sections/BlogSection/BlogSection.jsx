@@ -1,17 +1,21 @@
 import styles from "./BlogSection.module.scss";
 import { blog1x, blog2x, blogWebp1x, blogWebp2x } from "./gallery";
-import Button from "../Button/Button";
+import Button from "../../components/Button/Button";
 
 const BlogSection = () => {
   return (
     <section className={styles.blogSection} id='blog'>
-      <picture>
+      <picture className={styles.img}>
         <source
           srcSet={`${blogWebp1x} 1x, ${blogWebp2x} 2x`}
-          type="image/webp"
+          type="image/webp" sizes='(max-width: 320px) 320px,
+          (max-width: 768px) 368px,
+          (max-width: 1360px) 670px' 
         />
-        <source srcSet={`${blog1x} 1x, ${blog2x} 2x`} type="image/jpeg" />
-        <img className={styles.img} src={blog1x} alt="Tablet, book, cup" />
+        <source srcSet={`${blog1x} 1x, ${blog2x} 2x`} type="image/jpeg" sizes='(max-width: 320px) 320px,
+          (max-width: 768px) 368px,
+          (max-width: 1360px) 670px' />
+        <img src={blog1x} alt="Tablet, book, cup" loading="lazy"/>
       </picture>
 
       <div className={styles.textWrapper}>

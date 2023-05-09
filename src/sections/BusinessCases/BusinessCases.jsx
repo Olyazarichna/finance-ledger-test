@@ -1,5 +1,5 @@
 import styles from "./BusinessCases.module.scss";
-import BackDrop from "../Backdrop/Backdrop";
+import BackDrop from "../../components/Backdrop/Backdrop";
 import Lightbox from "react-spring-lightbox";
 import { useState } from "react";
 import { images } from "./gallery";
@@ -46,12 +46,16 @@ const BusinessCases = () => {
           <li key={index} className={styles.listItem}>
             <button className={styles.btn} onClick={() => openLightbox(index)}>
               <picture>
-                <source srcSet={image.webpsrcset} type="image/webp" />
-                <source srcSet={image.srcSet} type="image/jpeg" />
+                <source srcSet={image.webpsrcset} type="image/webp" sizes='(max-width: 320px) 280px,
+            (max-width: 768px) 223px,
+            (max-width: 1360px) 421px'/>
+                <source srcSet={image.srcSet} type="image/jpeg" sizes='(max-width: 320px) 280px,
+            (max-width: 768px) 222px,
+            (max-width: 1360px) 421px' />
                 <img
-                  className={styles.img}
                   src={image.src}
                   alt={image.alt}
+                  loading='lazy'
                 />
               </picture>
             </button>

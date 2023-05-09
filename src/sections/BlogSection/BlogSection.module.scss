@@ -3,24 +3,25 @@
 .blogSection {
   background-color: var(--second-bg);
   @include mq(tablet) {
-    display: flex;
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: auto 400px;
+    direction: rtl;
+  }
+  @include mq(desktop) {
+    display: grid;
+    grid-template-columns: auto 690px;
   }
 }
 .img {
   @include mq(tablet) {
-    height: 493px;
-    max-width: 368px;
-    object-fit: cover;
-  }
-  @include mq(desktop) {
-    height: auto;
-   max-width: 670px;
+    display: flex;
+    height:auto;
   }
 }
 
 .textWrapper {
   padding: 48px 20px 58px;
+  flex-grow: 1;
   @include mq(tablet) {
     padding: 59px 32px;
   }

@@ -10,7 +10,6 @@
   }
 }
 .textWrapper {
-  padding-bottom: 31px;
   text-align: center;
 }
 .text {
@@ -26,15 +25,14 @@
 .heading {
   @include fonts(32px, 400, 1.37);
   color: var(--secondary-txt-cl);
-  margin: 16px auto 24px;
+  margin: 16px auto 0;
   @include mq(table) {
     @include fonts(40px, 400, 1.35);
   }
 }
 .textInfo {
   @extend .text;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 24px auto 0;
   @include mq(table) {
     @include fonts(18px, 400, 1.38);
   }
@@ -42,6 +40,7 @@
 .list {
   display: grid;
   place-items: center;
+  margin-top: 30px;
   @include mq(tablet) {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 18px;
@@ -58,18 +57,19 @@
   }
 }
 .img {
-  max-width: 280px;
-  @include mq(tablet) {
-    max-width: 223px;
-  }
-  @include mq(desktop) {
-    max-width: 420px;
-  }
+  // @include mq(tablet) {
+  //   width: 223px;
+  //   height: 148px;
+  // }
+  // @include mq(desktop) {
+  //   width: 420px;
+  //   height: 287px;
+  // }
 }
 .caption {
   @include fonts(20px, 400, 1.35);
   color: var(--secondary-txt-cl);
-  padding-top: 16px;
+  margin-top: 16px;
   text-align: center;
   @include mq(tablet) {
     @include fonts(32px, 400, 1);
@@ -78,7 +78,7 @@
 .title {
   @include fonts(16px, 400, 1.16);
   color: var(--secondary-txt-cl);
-  padding-top: 8px;
+ margin-top: 8px;
   text-align: center;
   @include mq(tablet) {
     @include fonts(18px, 400, 1.38);

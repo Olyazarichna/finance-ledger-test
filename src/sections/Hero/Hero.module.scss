@@ -29,7 +29,8 @@
   margin-top: 16px;
   @include mq(tablet){
  width: 523px;
- margin: 16px auto;
+ margin-right: auto;
+ margin-left: auto;
     @include fonts(40px,400, 1.2);
   }
   @include mq(desktop){

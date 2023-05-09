@@ -4,17 +4,20 @@
 .headerContainer {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  width: 320px;
   padding-top: 22px;
   z-index: 100;
+  margin-left: auto;
+  margin-right: auto;
   @include mq(tablet) {
     display: flex;
+    width: 768px;
     justify-content: space-between;
     align-items: center;
     padding: 23px 32px 0;
   }
   @include mq(desktop) {
+    width: 1280px;
     padding: 28px 32px 0;
   }
 }
@@ -34,6 +37,7 @@
   padding-left: 6px;
   padding-right: 6px;
   transition: all 0.3s ease-out;
+  border-bottom: transparent 2px solid;
   cursor: pointer;
   @include mq(tablet) {
     padding-left: 10px;
@@ -44,8 +48,7 @@
     padding-right: 20px;
   }
   &:hover {
-    border-bottom: 2px solid;
-    border-color: var(--accent-cl);
+    border-bottom: var(--accent-cl) 2px solid;
   }
 }
 .navigationLink {

@@ -1,14 +1,14 @@
 import MainWrapper from './components/MainWrapper/MainWrapper';
-import BespokeSolutions from './components/BespokeSolutions/BespokeSolutions';
-import BusinessCases from './components/BusinessCases/BusinessCases';
-import BlogSection from './components/BlogSection/BlogSection';
-import TeamSection from './components/TeamSection/TeamSection';
-import RequestSection from './components/RequestSection/RequestSection';
-import Footer from './components/Footer/Footer';
+import BespokeSolutions from './sections/BespokeSolutions/BespokeSolutions';
+import BusinessCases from './sections/BusinessCases/BusinessCases';
+import BlogSection from './sections/BlogSection/BlogSection';
+import TeamSection from './sections/TeamSection/TeamSection';
+import RequestSection from './sections/RequestSection/RequestSection';
+import Footer from './sections/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className={'container'}>
       <MainWrapper />
       <BespokeSolutions />
       <BusinessCases />

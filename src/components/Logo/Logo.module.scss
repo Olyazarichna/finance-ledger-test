@@ -9,6 +9,7 @@
   cursor: pointer;
   @include mq(tablet) {
     align-items: center;
+    padding-left: 0;
   }
   &:hover,
   &:focus {
@@ -29,7 +30,7 @@
 .logoSpan {
   @extend .logoText;
   color: var(--accent-cl);
-  padding: 0 8px;
+  margin: 0 8px;
   transition: color 0.3s ease-out;
   &:hover,
   &:focus {

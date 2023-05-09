@@ -4,7 +4,7 @@ const OverlayElement = () => {
   return (
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <a href="/">
+          <a href="/" target="_blank" rel="noopener noreferrer" aria-label="join facebook">
                <svg
             className={styles.icon}
             xmlns="http://www.w3.org/2000/svg"
@@ -16,7 +16,7 @@ const OverlayElement = () => {
           </a>
         </li>
         <li className={styles.listItem}>
-          <a href="/">
+          <a href="/" target="_blank" rel="noopener noreferrer" aria-label="join twitter">
                <svg
             className={styles.icon}
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const OverlayElement = () => {
           </a>
         </li>
         <li className={styles.listItem}>
-          <a href="/">
+          <a href="/" target="_blank" rel="noopener noreferrer" aria-label="join youtube">
              <svg
             className={styles.icon}
             xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +40,7 @@ const OverlayElement = () => {
           </a>      
         </li>
         <li className={styles.listItem}>
-          <a href="/">
+        <a href="/" target='_blank' rel="noopener noreferrer" aria-label="join linkedin">
                <svg
             className={styles.icon}
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,6 @@ const OverlayElement = () => {
           </a>
         </li>
       </ul>
-   
   );
 };
 

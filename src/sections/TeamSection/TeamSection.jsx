@@ -1,6 +1,6 @@
 import styles from "./TeamSectiom.module.scss";
 import { people } from "./gallery";
-import OverlayElement from "../OverlayElement/OverlayElement";
+import OverlayElement from "../../components/OverlayElement/OverlayElement";
 
 const TeamSection = () => {
   return (
@@ -18,9 +18,26 @@ const TeamSection = () => {
           <li key={index} className={styles.listItem}>
             <div className={styles.overlay}>
               <picture>
-                <source srcSet={person.webpsrcset} type="image/webp" />
-                <source srcSet={person.srcSet} type="image/jpeg" />
-                <img className={styles.img} src={person.src} alt={person.alt} />
+                <source
+                  srcSet={person.webpsrcset}
+                  type="image/webp"
+                  sizes="(max-width: 320px) 280px,
+            (max-width: 768px) 222px,
+            (max-width: 1360px) 421px"
+                />
+                <source
+                  srcSet={person.srcSet}
+                  type="image/jpeg"
+                  sizes="(max-width: 320px) 280px,
+            (max-width: 768px) 223px,
+            (max-width: 1360px) 42px"
+                />
+                <img
+                  className={styles.img}
+                  src={person.src}
+                  alt={person.alt}
+                  loading="lazy"
+                />
               </picture>
               <div className={styles.overlayElement}>
                 <OverlayElement />

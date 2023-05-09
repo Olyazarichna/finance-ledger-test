@@ -1,5 +1,5 @@
 import styles from "./BespokeSolutions.module.scss";
-import Button from "../Button/Button";
+import Button from "../../components/Button/Button";
 import {
   people1x,
   people2x,
@@ -10,16 +10,20 @@ import {
 const BespokeSolutions = () => {
   return (
     <section className={styles.bespokeSolutions} id='about'>
-        <picture>
+        <picture className={styles.img}>
           <source
             srcSet={`${peopleWebp1x} 1x, ${peolpeWebp2x} 2x`}
-            type="image/webp"
+            type="image/webp" sizes='(max-width: 320px) 320px,
+            (max-width: 768px) 368px,
+            (max-width: 1360px) 670px'
           />
-          <source srcSet={`${people1x} 1x, ${people2x} 2x`} type="image/jpeg" />
-          <img
-            className={styles.img}
+          <source srcSet={`${people1x} 1x, ${people2x} 2x`} type="image/jpeg"  sizes='(max-width: 320px) 320px,
+            (max-width: 768px) 368px,
+            (max-width: 1360px) 670px' />
+          <img 
             src={people1x}
             alt="People in our company"
+            loading="lazy"
           />
         </picture>
       <div className={styles.textWrapper}>

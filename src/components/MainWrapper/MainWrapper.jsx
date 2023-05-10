@@ -8,9 +8,6 @@ const MainWrapper = () => {
       <Header />
       <Hero />
     </div>
-    // <section className={style.container}>
-
-    // </section>
   );
 };
 

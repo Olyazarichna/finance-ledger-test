@@ -15,13 +15,13 @@
 .img {
   @include mq(tablet) {
     display: flex;
-    height:auto;
+    height: auto;
   }
 }
 
 .textWrapper {
   padding: 48px 20px 58px;
-  flex-grow: 1;
+  text-align: left;
   @include mq(tablet) {
     padding: 59px 32px;
   }

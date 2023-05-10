@@ -72,6 +72,22 @@ const BusinessCases = () => {
             onClose={closeLightbox}
             images={images}
             currentIndex={currentImageIndex}
+            renderHeader={(onClose) => ( <button className={styles.closeBtn} onClick={closeLightbox}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="#fff"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m18 18-6-6m0 0L6 6m6 6 6-6m-6 6-6 6"
+                />
+              </svg>
+            </button>)}
             renderPrevButton={({ canPrev }) => {
               return (
                 canPrev && (

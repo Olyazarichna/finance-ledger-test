@@ -10,11 +10,11 @@ In the project directory, you can run:
 
 Clone the repository:
 
-### git clone <repository-url>
+### `git clone https://github.com/Olyazarichna/finance-ledger-test.git`
 
 Install dependencies:
 
-### npm install
+### `npm install`
 
 Start the development server:
 

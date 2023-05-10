@@ -13,12 +13,7 @@
 }
 .img {
   @include mq(tablet) {
-    width: 368px;
-    height: 354px;
-    object-fit: cover;
-  }
-  @include mq(desktop) {
-    width: 670px;
+    display: flex;
     height: auto;
   }
 }
